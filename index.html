@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gachiboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .key{
+    background-color:rgba(31, 31, 65, 0.4);
+    width:80px;
+    height:70px;
+    text-align: center;
+    border: solid 0.5px black;
+    border-radius: 10%;
+    font-size: 150%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin:5px;
+    }
+    .container{
+    margin-top: 30%;
+    margin-left:20%;
+    padding:0% 10%;
+    }
+    body{
+    background: url(https://i.ytimg.com/vi/aMFZNZ18z5k/maxresdefault.jpg) no-repeat center center fixed;
+    background-size: cover;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+                        <button id="q" class="key">
+                    <span>Q</span>
+                </button>
+
+                    <button id="w" class="key">
+                <span>W</span>
+            </button>
+
+                    <button id="e" class="key">
+                <span>E</span>
+            </button>
+
+                    <button id="r" class="key">
+                <span>R</span>
+            </button>
+            <br>
+                <button id="a" class="key">
+            <span>A</span>
+        </button>
+
+                <button id="s" class="key">
+            <span>S</span>
+        </button>
+
+                <button id="d" class="key">
+            <span>D</span>
+        </button>
+
+                <button id="f" class="key">
+            <span>F</span>
+        </button>
+        <br>
+
+                <button id="z" class="key">
+            <span>Z</span>
+        </button>
+
+                <button id="x" class="key">
+            <span>X</span>
+        </button>
+
+               <button id="c" class="key">
+            <span>C</span>
+        </button>
+
+                <button id="v" class="key">
+            <span>V</span>
+        </button>
+    </div>
+</body>
+<script>
+'use strict'
+function press(key){
+    document.getElementById(key).style.backgroundColor = "rgba(31, 31, 65, 0.9)";
+    }
+function unpress(key){
+    document.getElementById(key).style.backgroundColor = "rgba(31, 31, 65, 0.4)";
+    }
+document.addEventListener('keydown', function(event) {
+    let key = event.key;
+    let track;
+    press(key);
+    switch(key){
+        case "q": track = new Audio(sounds.q); break;
+        case "w": track = new Audio(sounds.w); break;
+        case "e": track = new Audio(sounds.e); break;
+        case "r": track = new Audio(sounds.r); break;
+        case "a": track = new Audio(sounds.a); break;
+        case "s": track = new Audio(sounds.s); break;
+        case "d": track = new Audio(sounds.d); break;
+        case "f": track = new Audio(sounds.f); break;
+        case "z": track = new Audio(sounds.z); break;
+        case "x": track = new Audio(sounds.x); break;
+        case "c": track = new Audio(sounds.c); break;
+        case "v": track = new Audio(sounds.v); break;
+    }
+    track.play();
+});
+document.addEventListener('keyup', function(event) {
+    unpress(event.key);
+});
+let sounds = {
+    q: "https://vocaroo.com/media_command.php?media=s1nMDEeSbCst&command=download_mp3",
+    w: "https://vocaroo.com/media_command.php?media=s1LEA6JnGdXG&command=download_mp3",
+    r: "https://vocaroo.com/media_command.php?media=s0fT1Qfp3OkQ&command=download_mp3",
+    a: "https://vocaroo.com/media_command.php?media=s1Qa4gqZVu5H&command=download_mp3",
+    s: "https://vocaroo.com/media_command.php?media=s1UixTPaHveU&command=download_mp3",
+    d: "https://vocaroo.com/media_command.php?media=s12ipg2tT7oc&command=download_mp3",
+    f: "https://vocaroo.com/media_command.php?media=s16A80pxdsjq&command=download_mp3",
+    z: "https://vocaroo.com/media_command.php?media=s03lkrYVysqN&command=download_mp3",
+    x: "https://vocaroo.com/media_command.php?media=s1aY8WlGzG8a&command=download_mp3",
+    c: "https://vocaroo.com/media_command.php?media=s1sa8zOKOzUZ&command=download_mp3",
+    v: "https://vocaroo.com/media_command.php?media=s1D6WYz8SGD5&command=download_mp3",
+    e: "https://vocaroo.com/media_command.php?media=s1178ViygL6p&command=download_mp3"
+
+};
+</script>
+</html>
